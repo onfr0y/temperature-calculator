@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food</title>
+</head>
+<body>
+    <h1>The food cost is:</h1>
+    <div id="result"></div>
+    <div id="price"></div>
+    <script>
+        let n = parseInt(prompt('Enter number of food items: '), 10);
+        let sum = 0;
+        let lastPrice = 0; // To store the last entered price
+
+        for (let i = 1; i <= n; i++) {
+            let price = parseInt(prompt('The cost of food item ' + i + ':'), 10);
+            sum += price;
+            lastPrice = price; 
+        }
+
+        document.getElementById('price').innerHTML = 'The cost of item ' + n + ' is ' + lastPrice + ' baht<br>';
+       
+        document.getElementById('result').innerHTML = '<br>The total food cost is ' + sum + ' baht';
+    </script>
+</body>
+</html>
